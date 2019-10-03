@@ -1,45 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="250dp"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
     android:weightSum="3"
-    android:background="@color/colorPrimaryDark">
+    tools:context=".view.mainactivity.mainactivity.MainActivity">
 
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="95dp"
         android:layout_height="65dp"
-        android:background= "@color/colorPrimary"/>
+        android:background="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/name"
+        app:layout_constraintBottom_toTopOf="@id/tweet"/>
 
     <TextView
         android:id="@+id/name"
         style="@style/TextAppearance.AppCompat.Medium"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:fontFamily="cursive"
+        android:padding="1dp"
+        android:text="Ben"
         android:textAlignment="center"
-        android:textSize="45dp"
-        android:hint="Name"
-        android:padding="5dp"
-        android:text="Ben" />
+        android:textSize="35dp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/idtag"
+        app:layout_constraintBottom_toTopOf="@id/tweet"/>
 
     <TextView
         android:id="@+id/tweet"
         style="@style/TextAppearance.AppCompat.Small"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:background="@color/colorPrimary"
         android:fontFamily="cursive"
-        android:textAlignment="center"
-        android:textSize="25dp"
         android:hint="Description"
         android:padding="5dp"
-        android:text="This is a Text Message" />
+        android:text="This is a Text Message"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
 
     <TextView
         android:id="@+id/time"
@@ -49,7 +61,11 @@
         android:background="@color/colorAccent"
         android:hint="Time"
         android:padding="5dp"
-        android:text="5:00am"/>
+        android:text="5:00am"
+        app:layout_constraintBottom_toTopOf="@id/tweet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/idtag"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/idtag"
@@ -57,9 +73,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:hint="Time"
+        android:hint="id tag"
         android:padding="5dp"
-        android:text="+Steven"/>
+        android:text="Steven"
+        app:layout_constraintBottom_toTopOf="@id/tweet"
+        app:layout_constraintEnd_toStartOf="@id/time"
+        app:layout_constraintStart_toEndOf="@id/name"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
