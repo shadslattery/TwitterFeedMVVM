@@ -1,8 +1,10 @@
 package com.example.twitterfeedmvvm.view.mainactivity.adapter;
 
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -48,7 +50,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
         holder.tv_time.setText(time);
 
         String image = staff.getImage();
-        holder.tv_image.setText(image);
+        holder.tv_image.setImageDrawable(Drawable.createFromPath(image));
     }
 
     @Override
@@ -57,7 +59,8 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
     }
 
     class PersonViewHolder extends RecyclerView.ViewHolder {
-        TextView tv_name, tv_idtag, tv_tweet, tv_time, tv_image;
+        TextView tv_name, tv_idtag, tv_tweet, tv_time;
+        ImageView tv_image;
 
         public PersonViewHolder(@NonNull View itemView) {
             super(itemView);
