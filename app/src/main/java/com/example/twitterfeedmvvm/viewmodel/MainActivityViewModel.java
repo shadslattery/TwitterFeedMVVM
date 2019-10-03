@@ -3,7 +3,7 @@ package com.example.twitterfeedmvvm.viewmodel;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 
-import com.example.twitterfeedmvvm.model.Person
+import com.example.twitterfeedmvvm.model.Person;
 import com.example.twitterfeedmvvm.repository.Repository;
 
 import java.util.List;
@@ -25,4 +25,3 @@ public class MainActivityViewModel extends AndroidViewModel {
             return repo.getData();}
 
         }
-}
