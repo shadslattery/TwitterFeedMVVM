@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:weightSum="3"
+    android:background="@color/colorPrimaryDark">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="95dp"
+        android:layout_height="65dp"
+        android:background="@mipmap/ic_picture"/>
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:fontFamily="cursive"
+        android:textAlignment="center"
+        android:textSize="45dp"
+        android:hint="Name"
+        android:padding="5dp"
+        android:text="Ben" />
+
+    <TextView
+        android:id="@+id/tweet"
+        style="@style/TextAppearance.AppCompat.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:fontFamily="cursive"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:hint="Description"
+        android:padding="5dp"
+        android:text="This is a Text Message" />
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:hint="Time"
+        android:padding="5dp"
+        android:text="5:00am"/>
+
+    <TextView
+        android:id="@+id/idtag"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:hint="Time"
+        android:padding="5dp"
+        android:text="+Steven"/>
+
 
 </LinearLayout>
